@@ -5,5 +5,4 @@ export interface Product {
   price: string;
   href: string;
   imageSrc: string;
-  imageAlt: string;
 }

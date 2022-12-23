@@ -5,7 +5,6 @@
     <div class="h-56 w-full group-hover:opacity-75 lg:h-72 xl:h-80">
       <img
         :src="product.imageSrc"
-        :alt="product.imageAlt"
         class="h-full w-full object-cover object-center"
       />
     </div>
@@ -27,7 +26,7 @@
 <script setup lang="ts">
 import { Product } from "../types/Product";
 
-const props = defineProps<{
+defineProps<{
   product: Product;
 }>();
 </script>

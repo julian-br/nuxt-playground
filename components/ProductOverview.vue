@@ -29,46 +29,5 @@ provided by Ugmonk With CTA link Preview Code Vue
 </template>
 
 <script lang="ts" setup>
-const products = [
-  {
-    id: 1,
-    name: "Leather Long Wallet",
-    color: "Natural",
-    price: "$75",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-04-trending-product-02.jpg",
-    imageAlt: "Hand stitched, orange leather long wallet.",
-  },
-  {
-    id: 2,
-    name: "Black Basic",
-    color: "Natural",
-    price: "$30",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Hand stitched, orange leather long wallet.",
-  },
-  {
-    id: 3,
-    name: "Grey Basic",
-    color: "Natural",
-    price: "$45",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
-    imageAlt: "Hand stitched, orange leather long wallet.",
-  },
-  {
-    id: 3,
-    name: "Flowerarray Shirt",
-    color: "Natural",
-    price: "$20",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
-    imageAlt: "Hand stitched, orange leather long wallet.",
-  },
-];
+const products = await $fetch("/api/products");
 </script>
