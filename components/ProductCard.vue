@@ -1,6 +1,7 @@
 <template>
   <div
-    class="shadow-lg border rounded-xl box-border overflow-hidden hover:border-violet-200"
+    class="shadow-lg border rounded-xl box-border overflow-hidden hover:border-emerald-200"
+    v-on:click="async () => await navigateTo(`/products/${product.id}`)"
   >
     <div class="h-56 w-full group-hover:opacity-75 lg:h-72 xl:h-80">
       <img

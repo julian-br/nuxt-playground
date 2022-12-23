@@ -1,6 +1,6 @@
 <template>
   <div>
     <NavBar></NavBar>
-    <ProductOverview></ProductOverview>
+    <ProductsList></ProductsList>
   </div>
 </template>
