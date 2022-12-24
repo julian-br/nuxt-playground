@@ -6,8 +6,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prisma:generate": "prisma generate && prisma db seed",
+    "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
+    "prisma:setup": "prisma migrate dev && prisma db seed",
     "prisma:studio": "prisma studio"
   },
   "devDependencies": {
