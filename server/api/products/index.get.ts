@@ -1,5 +1,9 @@
 import { productsData } from "../../productsData";
+import { PrismaClient } from "@prisma/client";
 
-export default defineEventHandler((event) => {
+const prisma = new PrismaClient();
+
+export default defineEventHandler(async (event) => {
+  console.log(await prisma.test.count());
   return productsData;
 });

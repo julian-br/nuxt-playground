@@ -6,3 +6,9 @@ node_modules
 .output
 .env
 dist
+.vscode/*
+!*/extensions.json
+
+# database
+/prisma/dev.db
+/prisma/dev.db-journal

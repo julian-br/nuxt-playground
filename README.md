@@ -1,42 +1,16 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Playground
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Prerequisites
 
-## Setup
+- [nodejs](https://nodejs.org/en/) installed 
 
-Make sure to install the dependencies:
+## Getting started
 
-```bash
-# yarn
-yarn install
+`npm install` - to install all dependecies  
+`npm run dev` - to start development server on http://localhost:3000  
+`npm run build` - to build for 
 
-# npm
-npm install
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+## Database
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+`npx prisma studio` - to open the primsa db browser
