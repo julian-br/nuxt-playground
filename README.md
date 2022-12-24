@@ -6,11 +6,13 @@
 
 ## Getting started
 
-`npm install` - to install all dependecies  
+`npm install` - to install all dependecies
 `npm run dev` - to start development server on http://localhost:3000  
-`npm run build` - to build for 
+`npm run build` - to build for production
 
 
 ## Database
+[prisma docs](https://www.prisma.io/docs) 
 
-`npx prisma studio` - to open the primsa db browser
+`npm run prisma:studio` - to open the primsa db browser
+`npm run prisma:migrate` - to create a new db migration
