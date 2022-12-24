@@ -1,9 +1,8 @@
-import { productsData } from "../../productsData";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
-  console.log(await prisma.test.count());
-  return productsData;
+  const products = prisma.product.findMany();
+  return products;
 });

@@ -11,7 +11,7 @@
     </div>
     <div class="m-2 mb-7">
       <h3 class="mt-4 text-sm font-semibold text-gray-700">
-        <a :href="product.href">
+        <a>
           <span class="absolute inset-0" />
           {{ product.name }}
         </a>

@@ -8,7 +8,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Test {
-  id    Int    @id @default(autoincrement())
-  title String
+model Product {
+  id       Int    @id @default(autoincrement())
+  name     String
+  color    String
+  price    String
+  imageSrc String
 }

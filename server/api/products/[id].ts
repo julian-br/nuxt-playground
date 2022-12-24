@@ -1,10 +1,14 @@
-import { productsData } from "../../productsData";
+import { PrismaClient } from "@prisma/client";
 
-export default defineEventHandler((event) => {
+const prisma = new PrismaClient();
+
+export default defineEventHandler(async (event) => {
   const productId = event.context.params.id;
 
-  const product = productsData.find((data) => data.id === productId);
-  if (product === undefined) {
+  const product = await prisma.product.findUnique({
+    where: { id: parseInt(productId) },
+  });
+  if (product === null) {
     throw new Error("product not in database");
   }
 
