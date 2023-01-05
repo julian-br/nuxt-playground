@@ -13,11 +13,30 @@ provided by Ugmonk With CTA link Preview Code Vue
         </h2>
       </div>
 
+      <div>
+        <div class="my-4">
+          <label for="filter" class="block text-sm font-medium text-gray-700"
+            >Search For Products</label
+          >
+          <div class="mt-1">
+            <input
+              type="text"
+              name="filter"
+              id="filter"
+              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"
+              v-on:input="filteredProducts"
+              v-model="filterString"
+              placeholder="search for products"
+            />
+          </div>
+        </div>
+      </div>
+
       <div
         class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8"
       >
         <div
-          v-for="product in products"
+          v-for="product in filteredProducts()"
           :key="product.id"
           class="group relative"
         >
@@ -29,5 +48,11 @@ provided by Ugmonk With CTA link Preview Code Vue
 </template>
 
 <script lang="ts" setup>
+const filterString = ref("");
 const products = await $fetch("/api/products");
+
+const filteredProducts = () =>
+  products.filter((product) =>
+    product.name.toLowerCase().includes(filterString.value.toLowerCase())
+  );
 </script>
